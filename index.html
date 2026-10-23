@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- SEO & Meta Ma'lumotlar -->
+  <title>Sirojiddin Narzullayev | Shaxsiy Portfolio & Flutter Dasturchi</title>
+  <meta name="description" content="Sirojiddin Narzullayev (Siroj) — O'zbekistonlik yosh dasturchi. Flutter, vebsaytlar va mobil ilovalar yaratish bo'yicha shaxsiy portfolio.">
+  <meta name="keywords" content="Sirojiddin Narzullayev, Siroj, Flutter, Edu Play 365, Dasturchi, Portfolio, Mobile Developer, O'zbekiston">
+  <meta name="author" content="Sirojiddin Narzullayev">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Asosiy Stil Fayli -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fon uchun yengil binafsha nurlar va zarralar -->
+  <div class="ambient-glow glow-top-left"></div>
+  <div class="ambient-glow glow-bottom-right"></div>
+  <div class="ambient-glow glow-center"></div>
+
+  <!-- ==============================================
+       NAVBAR (Yuqori Menyu)
+  =============================================== -->
+  <header class="navbar-wrapper" id="header">
+    <nav class="container nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Bosh sahifa">
+        <span class="logo-box">S</span>
+        <span class="logo-text">Sirojiddin<span class="dot">.Dev</span></span>
+      </a>
+
+      <!-- Asosiy Havolalar (Desktop) -->
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item">
+          <a href="#hero" class="nav-link active">
+            <i class="fa-solid fa-house"></i> <span>Bosh sahifa</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#about" class="nav-link">
+            <i class="fa-solid fa-user"></i> <span>Men haqimda</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#projects" class="nav-link">
+            <i class="fa-solid fa-laptop-code"></i> <span>Loyihalarim</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#skills" class="nav-link">
+            <i class="fa-solid fa-code"></i> <span>Ko‘nikmalarim</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">
+            <i class="fa-solid fa-paper-plane"></i> <span>Aloqa</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Navbar O'ng Tomon: Rejim tugmasi va Mobil menyu -->
+      <div class="nav-actions">
+        <!-- Rejim almashtirish (Dark / Light) -->
+        <button id="themeToggleBtn" class="theme-toggle-btn" title="Rejimni almashtirish" aria-label="Yorug' yoki qorong'u rejim">
+          <i class="fa-solid fa-moon moon-icon"></i>
+          <i class="fa-solid fa-sun sun-icon"></i>
+        </button>
+
+        <!-- Mobil Menyu Tugmasi (Hamburger) -->
+        <button class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Menyuni ochish" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ==============================================
+         1. BOSH SAHIFA (Hero Bo'limi)
+    =============================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        
+        <!-- Chap Tomon: Matnli Tanishtiruv -->
+        <div class="hero-content">
+          <div class="badge-status">
+            <span class="status-pulse"></span>
+            <span>Yangi loyihalar va hamkorlik uchun ochiqman</span>
+          </div>
+
+          <h2 class="hero-greeting">Assalomu alaykum, men</h2>
+          <h1 class="hero-title">
+            <span class="text-white">Sirojiddin</span>
+            <span class="gradient-text">Narzullayev</span>
+          </h1>
+
+          <!-- Dinamik matn (Typewriter) -->
+          <div class="typewriter-container">
+            <span class="type-prefix">Meni <strong>Siroj</strong> deb chaqirishadi &mdash; </span>
+            <span id="typewriterText" class="typewriter-dynamic"></span>
+            <span class="cursor">|</span>
+          </div>
+
+          <p class="hero-desc">
+            O‘zbekistonlik yosh Junior dasturchiman. Websaytlar va zamonaviy mobil ilovalar yaratishga juda qiziqaman. 
+            Mening asosiy maqsadim &mdash; dasturlash asoslarini mustahkam o‘rganish, tajribamni oshirish va amaliyot orqali yangi foydali loyihalar yaratishdir.
+          </p>
+
+          <!-- Asosiy Tugmalar -->
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-rocket"></i>
+              <span>Loyihalarimni ko‘rish</span>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fa-solid fa-comment-dots"></i>
+              <span>Bog‘lanish</span>
+            </a>
+          </div>
+
+          <!-- Tezkor Ijtimoiy Tarmoqlar -->
+          <div class="hero-socials">
+            <span class="social-label">Ijtimoiy tarmoqlar:</span>
+            <div class="social-links">
+              <!-- Telegram manzilingiz -->
+              <a href="https://t.me/Narzullayev_w" target="_blank" rel="noopener noreferrer" class="social-btn" title="Telegram">
+                <i class="fa-brands fa-telegram"></i>
+              </a>
+              <!-- GitHub profilingiz -->
+              <a href="https://github.com/goldsirojiddin" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <!-- Email orqali xat yozish -->
+              <a href="mailto:goldsirojiddin@gmail.com" class="social-btn" title="Email orqali yozish">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- O'ng Tomon: Interaktiv Kod Terminali Karta (Rasmsiz) -->
+        <div class="hero-visual">
+          <div class="code-terminal-wrapper">
+            <div class="terminal-glow"></div>
+            <div class="code-terminal-card">
+              <div class="terminal-header">
+                <div class="terminal-dots">
+                  <span class="dot-red"></span>
+                  <span class="dot-yellow"></span>
+                  <span class="dot-green"></span>
+                </div>
+                <div class="terminal-title">sirojiddin@dev: ~/portfolio.dart</div>
+                <div class="terminal-lang"><i class="fa-brands fa-flutter"></i> Flutter</div>
+              </div>
+              <div class="terminal-body">
+                <pre><code><span class="code-kw">class</span> <span class="code-class">Developer</span> {
+  <span class="code-kw">final</span> String name = <span class="code-str">"Sirojiddin"</span>;
+  <span class="code-kw">final</span> String callMe = <span class="code-str">"Siroj"</span>;
+  <span class="code-kw">final</span> String role = <span class="code-str">"Junior Dev"</span>;
+  <span class="code-kw">final</span> String country = <span class="code-str">"Uzbekistan 🇺🇿"</span>;
+
+  <span class="code-kw">final</span> List&lt;String&gt; focus = [
+    <span class="code-str">"Flutter & Dart"</span>,
+    <span class="code-str">"Edu Play 365"</span>,
+    <span class="code-str">"Web Dev (HTML/CSS/JS)"</span>
+  ];
+
+  <span class="code-kw">void</span> <span class="code-fn">learnAndBuild</span>() {
+    <span class="code-fn">print</span>(<span class="code-str">"Har kuni yangi bilim!"</span>);
+  }
+}</code></pre>
+              </div>
+
+              <!-- Floating info kartochkalari -->
+              <div class="floating-badge badge-flutter">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <div>
+                  <strong>Flutter & Dart</strong>
+                  <small>Edu Play 365 muallifi</small>
+                </div>
+              </div>
+
+              <div class="floating-badge badge-location">
+                <span class="flag-icon">🇺🇿</span>
+                <div>
+                  <strong>O‘zbekiston</strong>
+                  <small>Yosh Dasturchi</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pastga siljish ko'rsatkichi -->
+      <a href="#about" class="scroll-down-indicator" aria-label="Pastga siljish">
+        <span>Pastga</span>
+        <i class="fa-solid fa-chevron-down animate-bounce"></i>
+      </a>
+    </section>
+
+    <!-- ==============================================
+         2. MEN HAQIMDA (About Bo'limi)
+    =============================================== -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <i class="fa-solid fa-id-card"></i> Tanishtiruv
+          </div>
+          <h2 class="section-title">Men haqimda</h2>
+          <div class="title-bar"></div>
+          <p class="section-subtitle">
+            Dasturlashga bo‘lgan qiziqishim, shaxsiy maqsadlarim va amalga oshirayotgan ishlarim haqida
+          </p>
+        </div>
+
+        <div class="about-grid">
+          
+          <!-- Chap tomondagi hikoya -->
+          <div class="about-story-card">
+            <div class="story-header">
+              <div class="user-chip">
+                <i class="fa-solid fa-code"></i>
+                <span>Sirojiddin Narzullayev (Siroj)</span>
+              </div>
+              <span class="status-online"><i class="fa-solid fa-circle"></i> O‘rganish va izlanishda</span>
+            </div>
+
+            <h3 class="story-title">
+              Dasturlash sohasida o‘z bilim va amaliy tajribasini oshirib borayotgan yosh Junior dasturchiman.
+            </h3>
+
+            <p class="story-text">
+              Salom! Mening ismim <strong>Sirojiddin</strong>, do‘stlarim va tanishlarim meni <strong>Siroj</strong> deb atashadi. 
+              Men O‘zbekistonda yashab, mobil ilovalar (Flutter) hamda boshlang‘ich veb texnologiyalar (HTML, CSS, JavaScript) yo‘nalishida <strong>Junior / Beginner</strong> darajasida izlanmoqdaman.
+            </p>
+
+            <p class="story-text">
+              Dasturlash men uchun yangi imkoniyatlar dunyosi. Flutter texnologiyasini o‘rganish davomida bolalar uchun ta’lim jarayonini qiziqarli qilish maqsadida ilk amaliy loyiham &mdash; <strong>Edu Play 365</strong> nomli mobil ilovani ishlab chiqdim.
+            </p>
+
+            <div class="story-highlights">
+              <div class="highlight-item">
+                <div class="highlight-icon"><i class="fa-solid fa-bullseye"></i></div>
+                <div>
+                  <h4>Bosh Maqsadim</h4>
+                  <p>Dasturlash sohasidagi mahoratimni oshirib, O‘zbekiston va xalqaro miqyosda foydalaniladigan sifatli mobil hamda veb platformalarni yaratish.</p>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon"><i class="fa-solid fa-heart"></i></div>
+                <div>
+                  <h4>Qiziqishlarim</h4>
+                  <p>Cross-platform mobil ilovalar (Flutter/Dart), qulay foydalanuvchi interfeyslari (UI/UX) va zamonaviy web texnologiyalari.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-action-btns">
+              <a href="#contact" class="btn btn-primary">
+                <i class="fa-solid fa-envelope-open-text"></i>
+                <span>Men bilan bog‘laning</span>
+              </a>
+              <button class="btn btn-secondary" id="openResumeBtn">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Rezyumeni ko‘rish</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- O'ng tomondagi asosiy ko'rsatkichlar & kartalar -->
+          <div class="about-metrics">
+            
+            <div class="metric-card">
+              <div class="metric-icon-box purple">
+                <i class="fa-solid fa-mobile-screen"></i>
+              </div>
+              <div class="metric-info">
+                <h3>Edu Play 365</h3>
+                <p>Mening ta’limiy mobil ilova loyiham. Flutterda yaratilgan interaktiv o‘yin va bilim platformasi.</p>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box cyan">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <div class="metric-info">
+                <h3>Veb & Mobil</h3>
+                <p>Faqatgina ilova emas, balki moslashuvchan, tez ishlaydigan vebsaytlar yaratish tajribasi.</p>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box pink">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <div class="metric-info">
+                <h3>Uzluksiz Rivojlanish</h3>
+                <p>Har kuni yangi bilimlar o‘rganish, zamonaviy standartlar va toza arxitekturaga intilish.</p>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box amber">
+                <i class="fa-solid fa-map-location-dot"></i>
+              </div>
+              <div class="metric-info">
+                <h3>O‘zbekiston</h3>
+                <p>Mamlakatimiz IT sohasiga o‘z hissamni qo‘shish va yoshlar uchun foydali mahsulotlar yaratish.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         3. LOYIHALARIM (Projects Bo'limi)
+    =============================================== -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <i class="fa-solid fa-diagram-project"></i> Portfolio
+          </div>
+          <h2 class="section-title">Mening Loyihalarim</h2>
+          <div class="title-bar"></div>
+          <p class="section-subtitle">
+            Haqiqiy yaratilgan ilovam va ustida ishlayotgan yangi loyihalarim
+          </p>
+        </div>
+
+        <!-- Loyihalar filtri -->
+        <div class="projects-filter-wrap">
+          <button class="filter-btn active" data-filter="all">Barchasi</button>
+          <button class="filter-btn" data-filter="mobile">Mobil Ilova</button>
+          <button class="filter-btn" data-filter="web">Websayt</button>
+        </div>
+
+        <!-- Loyihalar Ro'yxati -->
+        <div class="projects-grid">
+
+          <!-- 1-Loyiha: Edu Play 365 (Asosiy Flutter Loyihasi - Rasmsiz Zamonaviy Karta) -->
+          <article class="project-card featured-project" data-category="mobile">
+            <div class="project-banner project-banner-app">
+              <div class="app-visual-preview">
+                <div class="app-icon-circle">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="app-visual-info">
+                  <span class="app-badge-pill">Flutter Mobile App</span>
+                  <h4 class="app-title-preview">Edu Play 365</h4>
+                  <p class="app-sub-preview">Bolalar uchun ta’lim, kelajak uchun imkoniyat!</p>
+                </div>
+                <div class="app-features-mini">
+                  <span><i class="fa-solid fa-calculator"></i> Matematika</span>
+                  <span><i class="fa-solid fa-book-open"></i> Til & Nutq</span>
+                  <span><i class="fa-solid fa-brain"></i> Mantiq</span>
+                </div>
+              </div>
+              <div class="project-badge">
+                <i class="fa-solid fa-star"></i> Asosiy Loyiha
+              </div>
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-light" id="openEduModalBtn">
+                  <i class="fa-solid fa-circle-info"></i> To‘liq ma’lumot
+                </button>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-type"><i class="fa-solid fa-mobile-screen"></i> Mobil Ta’limiy Ilova</span>
+                <span class="project-status in-progress"><i class="fa-solid fa-check"></i> Yaratilgan</span>
+              </div>
+
+              <h3 class="project-name">Edu Play 365</h3>
+              
+              <p class="project-desc">
+                Bolalar uchun ta’lim, kelajak uchun imkoniyat! Flutter va Dart yordamida yaratilgan ta’limiy platforma: qiziqarli o‘yinlar, interaktiv mashg‘ulotlar (Matematika, Til va nutq, Mantiqiy va ijodiy fikrlash) orqali bolalarning bilim olish jarayonini samarali va qiziqarli qiladi.
+              </p>
+
+              <!-- Ishlatilgan Texnologiyalar -->
+              <div class="project-tech-stack">
+                <span class="tech-tag"><i class="fa-brands fa-flutter"></i> Flutter</span>
+                <span class="tech-tag"><i class="fa-solid fa-code"></i> Dart</span>
+                <span class="tech-tag"><i class="fa-solid fa-graduation-cap"></i> Ta’limiy Platforma</span>
+                <span class="tech-tag"><i class="fa-solid fa-gamepad"></i> Interaktiv O‘yinlar</span>
+              </div>
+
+              <div class="project-footer">
+                <button class="btn btn-primary btn-sm" id="openEduModalBtn2">
+                  <i class="fa-solid fa-eye"></i> Batafsil ko‘rish
+                </button>
+                <a href="#contact" class="btn btn-outline btn-sm">
+                  <i class="fa-solid fa-message"></i> Qiziqdim
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2-Loyiha: Shaxsiy Portfolio Sayti (Ushbu Sayt) -->
+          <article class="project-card" data-category="web">
+            <div class="project-banner project-banner-web">
+              <div class="web-preview-mockup">
+                <div class="browser-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="code-preview-content">
+                  <span class="code-line"><span class="purple-code">const</span> developer = {</span>
+                  <span class="code-line">&nbsp;&nbsp;name: <span class="green-code">"Sirojiddin"</span>,</span>
+                  <span class="code-line">&nbsp;&nbsp;role: <span class="green-code">"Flutter & Web"</span>,</span>
+                  <span class="code-line">&nbsp;&nbsp;country: <span class="green-code">"Uzbekistan"</span></span>
+                  <span class="code-line">};</span>
+                </div>
+              </div>
+              <div class="project-badge web-badge">
+                <i class="fa-solid fa-globe"></i> Websayt
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-type"><i class="fa-solid fa-globe"></i> Zamonaviy Vebsayt</span>
+                <span class="project-status live"><i class="fa-solid fa-bolt"></i> Jonli Loyiha</span>
+              </div>
+
+              <h3 class="project-name">Sirojiddin Shaxsiy Portfoliosi</h3>
+              
+              <p class="project-desc">
+                Binafsha va qora ranglar uyg‘unligidagi, to‘liq moslashuvchan, dark/light rejimiga ega bo‘lgan professional portfolio websayt. Toza HTML5, zamonaviy CSS3 va JavaScript asosida yaratilgan.
+              </p>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag"><i class="fa-brands fa-html5"></i> HTML5</span>
+                <span class="tech-tag"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                <span class="tech-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+                <span class="tech-tag"><i class="fa-solid fa-moon"></i> Dark / Light</span>
+              </div>
+
+              <div class="project-footer">
+                <a href="#hero" class="btn btn-secondary btn-sm">
+                  <i class="fa-solid fa-arrow-up"></i> Saytni ko‘zdan kechirish
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3-Karta: Kelgusi Rejalashtirilgan Loyihalar uchun Ochiq Karta -->
+          <article class="project-card coming-soon-card" data-category="mobile web">
+            <div class="coming-soon-body">
+              <div class="coming-soon-icon">
+                <i class="fa-solid fa-hammer"></i>
+              </div>
+              <h3>Yangi Loyihalar Ustida Ish Ketmoqda</h3>
+              <p>
+                Dasturlash bilimlarimni rivojlantirish jarayonida yangi foydali mobil ilovalar va qulay vebsaytlar ishlab chiqish ustida ishlayapman.
+              </p>
+              <div class="upcoming-tags">
+                <span>#Flutter</span>
+                <span>#MobileApp</span>
+                <span>#WebDevelopment</span>
+              </div>
+              <a href="#contact" class="btn btn-outline btn-sm">
+                <i class="fa-solid fa-lightbulb"></i> Yangi loyiha taklif qilish
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         4. KO‘NIKMALARIM (Skills Bo'limi)
+    =============================================== -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <i class="fa-solid fa-layer-group"></i> Texnologiyalar
+          </div>
+          <h2 class="section-title">Ko‘nikmalarim & Bilimlarim</h2>
+          <div class="title-bar"></div>
+          <p class="section-subtitle">
+            Loyiha yaratishda foydalanadigan dasturlash tillari, freymvorklar va zamonaviy vositalar
+          </p>
+        </div>
+
+        <div class="skills-categories-grid">
+
+          <!-- 1-Kategoriya: Mobil Dasturlash (Asosiy yo'nalish) -->
+          <div class="skill-category-card highlight-category">
+            <div class="cat-header">
+              <div class="cat-icon-box purple">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+              </div>
+              <div>
+                <h3 class="cat-title">Mobil Dasturlash</h3>
+                <span class="cat-subtitle">Asosiy e’tiborim va qiziqishim</span>
+              </div>
+            </div>
+
+            <div class="skill-items-list">
+              
+              <!-- Flutter -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">
+                    <i class="fa-brands fa-flutter color-flutter"></i> Flutter Freymvork
+                  </span>
+                  <span class="skill-level-text">Junior / Amaliyotda</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-65"></div>
+                </div>
+                <small class="skill-note">Edu Play 365 ilovasi orqali amaliy tajriba</small>
+              </div>
+
+              <!-- Dart -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">
+                    <i class="fa-solid fa-code color-dart"></i> Dart Dasturlash Tili
+                  </span>
+                  <span class="skill-level-text">Junior</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-60"></div>
+                </div>
+                <small class="skill-note">Sintaksis, funksiyalar va asosiy OOP tamoyillari</small>
+              </div>
+
+              <!-- Mobile UI/UX -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">
+                    <i class="fa-solid fa-wand-magic-sparkles color-accent"></i> Mobil UI/UX Asoslari
+                  </span>
+                  <span class="skill-level-text">Beginner / Junior</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-55"></div>
+                </div>
+                <small class="skill-note">Sodda va qulay mobil interfeyslar yaratish</small>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- 2-Kategoriya: Web Dasturlash -->
+          <div class="skill-category-card">
+            <div class="cat-header">
+              <div class="cat-icon-box cyan">
+                <i class="fa-solid fa-globe"></i>
+              </div>
+              <div>
+                <h3 class="cat-title">Web Texnologiyalar</h3>
+                <span class="cat-subtitle">Vebsaytlar yaratish asoslari</span>
+              </div>
+            </div>
+
+            <div class="skill-items-list">
+              
+              <!-- HTML5 -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">
+                    <i class="fa-brands fa-html5 color-html"></i> HTML5
+                  </span>
+                  <span class="skill-level-text">Junior / Boshlang‘ich</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-60"></div>
+                </div>
+                <small class="skill-note">Veb-sahifalar strukturasi, asosiy teglar va formalar</small>
+              </div>
+
+              <!-- CSS3 & Moslashuvchanlik -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">
+                    <i class="fa-brands fa-css3-alt color-css"></i> CSS3 & Stil berish
+                  </span>
+                  <span class="skill-level-text">Junior / Boshlang‘ich</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-55"></div>
+                </div>
+                <small class="skill-note">Flexbox, ranglar, sodda animatsiya va dizayn</small>
+              </div>
+
+              <!-- JavaScript -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">
+                    <i class="fa-brands fa-js color-js"></i> JavaScript (JS)
+                  </span>
+                  <span class="skill-level-text">Beginner</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-45"></div>
+                </div>
+                <small class="skill-note">O‘zgaruvchilar, DOM hodisalari va boshlang‘ich skriptlar</small>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- 3-Kategoriya: Ishchi Vositalar va Boshqalar -->
+          <div class="skill-category-card">
+            <div class="cat-header">
+              <div class="cat-icon-box pink">
+                <i class="fa-solid fa-toolbox"></i>
+              </div>
+              <div>
+                <h3 class="cat-title">Vositalar & Yondashuv</h3>
+                <span class="cat-subtitle">Boshlang‘ich amaliyot</span>
+              </div>
+            </div>
+
+            <div class="skill-items-list">
+              
+              <!-- Git & GitHub -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">
+                    <i class="fa-brands fa-github color-github"></i> Git & GitHub
+                  </span>
+                  <span class="skill-level-text">Beginner / Junior</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-55"></div>
+                </div>
+                <small class="skill-note">Repozitoriyalar yaratish, commit va push buyruqlari</small>
+              </div>
+
+              <!-- Responsive Design -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">
+                    <i class="fa-solid fa-mobile-button color-responsive"></i> Responsive Moslik
+                  </span>
+                  <span class="skill-level-text">Junior</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-60"></div>
+                </div>
+                <small class="skill-note">Mobil va kompyuter ekranlariga moslash asoslari</small>
+              </div>
+
+              <!-- Doimiy O'rganish -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">
+                    <i class="fa-solid fa-brain color-accent"></i> Yangi Bilimlarni O‘rganish
+                  </span>
+                  <span class="skill-level-text">100%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-95"></div>
+                </div>
+                <small class="skill-note">Dasturlashni rivojlantirishga kuchli ishtiyoq</small>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         5. ALOQA (Contact Bo'limi)
+    =============================================== -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <i class="fa-solid fa-envelope"></i> Aloqa
+          </div>
+          <h2 class="section-title">Men Bilan Bog‘lanish</h2>
+          <div class="title-bar"></div>
+          <p class="section-subtitle">
+            Savollaringiz, takliflaringiz yoki yangi loyiha g‘oyalari bormi? Xabar qoldiring yoki to‘g‘ridan-to‘g‘ri yozing!
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- Chap Tomon: Aloqa Ma'lumotlari Kartalari -->
+          <div class="contact-cards-column">
+            
+            <div class="contact-intro-card">
+              <h3>Keling, birgalikda ajoyib loyihalar yarataylik!</h3>
+              <p>
+                Men har doim yangi texnologiyalarni o‘rganishga, qiziqarli startaplar va dasturiy loyihalarda qatnashishga tayyorman. 
+                Quyidagi kanallar orqali menga istalgan vaqtda yozishingiz mumkin:
+              </p>
+            </div>
+
+            <!-- Telegram Karta (Eng qulay kanal) -->
+            <div class="contact-channel-card telegram-channel">
+              <div class="channel-icon-box">
+                <i class="fa-brands fa-telegram"></i>
+              </div>
+              <div class="channel-details">
+                <span class="channel-name">Telegram</span>
+                <span class="channel-value">@Narzullayev_w</span>
+                <span class="channel-hint">Eng tezkor javob olish usuli</span>
+              </div>
+              <div class="channel-actions">
+                <a href="https://t.me/Narzullayev_w" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-telegram" title="Telegramda ochish">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Ochish
+                </a>
+                <button class="btn btn-sm btn-icon copy-btn" data-copy="@Narzullayev_w" title="Foydalanuvchi nomini nusxalash">
+                  <i class="fa-regular fa-copy"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- GitHub Karta -->
+            <div class="contact-channel-card github-channel">
+              <div class="channel-icon-box">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <div class="channel-details">
+                <span class="channel-name">GitHub</span>
+                <span class="channel-value">github.com/goldsirojiddin</span>
+                <span class="channel-hint">Mening ochiq kodli loyihalarim</span>
+              </div>
+              <div class="channel-actions">
+                <a href="https://github.com/goldsirojiddin" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" title="GitHub profilini ko‘rish">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Profil
+                </a>
+              </div>
+            </div>
+
+            <!-- Email Karta -->
+            <div class="contact-channel-card email-channel">
+              <div class="channel-icon-box">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="channel-details">
+                <span class="channel-name">Elektron Pochta</span>
+                <span class="channel-value" id="emailText">goldsirojiddin@gmail.com</span>
+                <span class="channel-hint">Rasmiy va umumiy xatlar uchun</span>
+              </div>
+              <div class="channel-actions">
+                <a href="mailto:goldsirojiddin@gmail.com" class="btn btn-sm btn-secondary" title="Xat yozish">
+                  <i class="fa-solid fa-paper-plane"></i> Xat
+                </a>
+                <button class="btn btn-sm btn-icon copy-btn" data-copy="goldsirojiddin@gmail.com" title="Email manzilni nusxalash">
+                  <i class="fa-regular fa-copy"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Manzil & Joylashuv -->
+            <div class="contact-channel-card location-channel">
+              <div class="channel-icon-box">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="channel-details">
+                <span class="channel-name">Joylashuv</span>
+                <span class="channel-value">O‘zbekiston</span>
+                <span class="channel-hint">Masofaviy (Remote) yoki mahalliy ishlash</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- O'ng Tomon: Ishlaydigan Interaktiv Xabar Yuborish Formasi -->
+          <div class="contact-form-wrapper">
+            <div class="form-glass-card">
+              <div class="form-title-group">
+                <h3>To‘g‘ridan-to‘g‘ri xabar yuborish</h3>
+                <p>Quyidagi shaklni to‘ldiring, xabaringizni tezda ko‘rib chiqaman.</p>
+              </div>
+
+              <form id="contactForm" class="contact-form" novalidate>
+                
+                <!-- Ism -->
+                <div class="form-group">
+                  <label for="userName">Ismingiz <span class="required">*</span></label>
+                  <div class="input-wrap">
+                    <i class="fa-solid fa-user input-icon"></i>
+                    <input type="text" id="userName" name="name" placeholder="Masalan: Sardor Aliyev" required autocomplete="name">
+                  </div>
+                  <span class="form-error-msg" id="nameError">Iltimos, ismingizni kiriting</span>
+                </div>
+
+                <!-- Email yoki Telegram -->
+                <div class="form-group">
+                  <label for="userContact">Email yoki Telegram manzilingiz <span class="required">*</span></label>
+                  <div class="input-wrap">
+                    <i class="fa-solid fa-at input-icon"></i>
+                    <input type="text" id="userContact" name="contact" placeholder="email@manzil.uz yoki @username" required>
+                  </div>
+                  <span class="form-error-msg" id="contactError">Bog‘lanish uchun manzilni to‘g‘ri kiriting</span>
+                </div>
+
+                <!-- Mavzu -->
+                <div class="form-group">
+                  <label for="messageSubject">Mavzu</label>
+                  <div class="input-wrap">
+                    <i class="fa-solid fa-tag input-icon"></i>
+                    <input type="text" id="messageSubject" name="subject" placeholder="Loyiha haqida / Hamkorlik / Savol">
+                  </div>
+                </div>
+
+                <!-- Xabar Matni -->
+                <div class="form-group">
+                  <label for="userMessage">Xabaringiz <span class="required">*</span></label>
+                  <div class="input-wrap textarea-wrap">
+                    <i class="fa-solid fa-message input-icon"></i>
+                    <textarea id="userMessage" name="message" rows="5" placeholder="Assalomu alaykum Siroj, men siz bilan..." required></textarea>
+                  </div>
+                  <span class="form-error-msg" id="messageError">Iltimos, xabaringiz matnini kiriting (kamida 10 ta belgi)</span>
+                </div>
+
+                <!-- Yuborish Tugmasi -->
+                <button type="submit" class="btn btn-primary btn-block" id="submitFormBtn">
+                  <i class="fa-solid fa-paper-plane"></i>
+                  <span>Xabarni Yuborish</span>
+                </button>
+
+                <!-- Telegram orqali tezkor yo'naltirish yordamchisi -->
+                <div class="form-direct-telegram">
+                  <span>yoki to‘g‘ridan-to‘g‘ri:</span>
+                  <button type="button" class="btn-link" id="sendViaTelegramBtn">
+                    <i class="fa-brands fa-telegram"></i> Telegram orqali yozish
+                  </button>
+                </div>
+
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==============================================
+       FOOTER (Pastki Qism)
+  =============================================== -->
+  <footer class="footer-wrapper">
+    <div class="container footer-container">
+      
+      <div class="footer-brand">
+        <a href="#hero" class="nav-logo">
+          <span class="logo-box">S</span>
+          <span class="logo-text">Sirojiddin<span class="dot">.Dev</span></span>
+        </a>
+        <p class="footer-tagline">
+          Zamonaviy mobil ilovalar va sifatli websaytlar yaratuvchi yosh dasturchi portfolio platformasi.
+        </p>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Bo‘limlar</h4>
+        <ul>
+          <li><a href="#hero">Bosh sahifa</a></li>
+          <li><a href="#about">Men haqimda</a></li>
+          <li><a href="#projects">Loyihalarim (Edu Play 365)</a></li>
+          <li><a href="#skills">Ko‘nikmalarim</a></li>
+          <li><a href="#contact">Aloqa</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact-brief">
+        <h4>Bog‘lanish</h4>
+        <p><i class="fa-brands fa-telegram"></i> @Narzullayev_w</p>
+        <p><i class="fa-solid fa-location-dot"></i> O‘zbekiston</p>
+        <div class="footer-social-row">
+          <a href="https://t.me/Narzullayev_w" target="_blank" rel="noopener noreferrer" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+          <a href="https://github.com/goldsirojiddin" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="mailto:goldsirojiddin@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; <span id="currentYear">2026</span> Sirojiddin Narzullayev. Barcha huquqlar himoyalangan.</p>
+        <p class="footer-credit">Flutter & Web bilan yaratildi &bull; O‘zbekiston</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==============================================
+       YUQORIGA QAYTISH TUGMASI (Scroll to top)
+  =============================================== -->
+  <button id="scrollToTopBtn" class="scroll-to-top-btn" title="Yuqoriga qaytish" aria-label="Yuqoriga qaytish">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- ==============================================
+       MODAL 1: "Edu Play 365" Batafsil Ma'lumot
+  =============================================== -->
+  <div class="modal-backdrop" id="eduModal" aria-hidden="true" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        
+        <div class="modal-header">
+          <div class="modal-title-wrap">
+            <span class="modal-tag">Flutter Ta’limiy Loyiha</span>
+            <h3 class="modal-title">Edu Play 365 Ilovasi Haqida</h3>
+          </div>
+          <button class="modal-close-btn" id="closeEduModalBtn" aria-label="Yopish">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <div class="modal-banner-box">
+            <div class="modal-banner-icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="modal-banner-text">
+              <span class="banner-badge">Flutter SDK &bull; Ta’limiy Mobil Ilova</span>
+              <h3>Edu Play 365</h3>
+              <p>Bolalar uchun ta’lim, kelajak uchun imkoniyat!</p>
+            </div>
+          </div>
+
+          <div class="modal-details">
+            <h4>Loyiha Maqsadi va Shiori:</h4>
+            <p>
+              <strong>"Bolalar uchun ta’lim, kelajak uchun imkoniyat!"</strong> &mdash; <strong>Edu Play 365</strong> Flutter yordamida yaratilgan, qiziqarli o‘yinlar, interaktiv mashg‘ulotlar va psixologik rivojlanish materiallari orqali bolalarning ta’lim jarayonini samarali qilishga mo‘ljallangan milliy ta’limiy loyihadir.
+            </p>
+
+            <h4>Asosiy O‘quv Yo‘nalishlari:</h4>
+            <ul class="modal-features-list">
+              <li><i class="fa-solid fa-calculator"></i> <strong>Matematika:</strong> Hisoblash va mantiqiy fikrlash ko‘nikmalari.</li>
+              <li><i class="fa-solid fa-book-open"></i> <strong>Til va nutq:</strong> So‘z boyligini oshirish va to‘g‘ri nutq madaniyati.</li>
+              <li><i class="fa-solid fa-brain"></i> <strong>Mantiqiy & Ijodiy fikrlash:</strong> Muammolarni hal qilish, analiz va tasavvurni rivojlantirish.</li>
+              <li><i class="fa-solid fa-shapes"></i> <strong>Qurish va konstruksiyalash:</strong> Tasavvurni amaliyotda qo‘llash va fazoviy tafakkur.</li>
+              <li><i class="fa-solid fa-users"></i> <strong>Ijtimoiy ko‘nikma:</strong> Atrofdagilar bilan sog‘lom munosabat va jamoaviy tushuncha.</li>
+              <li><i class="fa-solid fa-chalkboard-user"></i> <strong>Metodik materiallar:</strong> Bog‘cha tarbiyachilari va ota-onalar uchun video darslar va sertifikatlar.</li>
+            </ul>
+
+            <h4>Qo‘llanilgan Texnologiyalar:</h4>
+            <div class="project-tech-stack">
+              <span class="tech-tag"><i class="fa-brands fa-flutter"></i> Flutter SDK</span>
+              <span class="tech-tag"><i class="fa-solid fa-code"></i> Dart</span>
+              <span class="tech-tag"><i class="fa-solid fa-mobile-screen"></i> Responsive UI</span>
+              <span class="tech-tag"><i class="fa-solid fa-gamepad"></i> Interactive Games</span>
+              <span class="tech-tag"><i class="fa-solid fa-shield-halved"></i> Bolalar uchun xavfsiz</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <a href="#contact" class="btn btn-primary" id="discussEduModalBtn">
+            <i class="fa-solid fa-comments"></i> Ushbu loyiha haqida yozish
+          </a>
+          <button class="btn btn-secondary" id="closeEduModalBtn2">Yopish</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ==============================================
+       MODAL 2: Rezyume (CV) Ko'rish Modali
+  =============================================== -->
+  <div class="modal-backdrop" id="resumeModal" aria-hidden="true" role="dialog">
+    <div class="modal-dialog resume-dialog">
+      <div class="modal-content">
+        
+        <div class="modal-header">
+          <div class="modal-title-wrap">
+            <span class="modal-tag">Rezyume / CV</span>
+            <h3 class="modal-title">Sirojiddin Narzullayev &bull; Dasturchi</h3>
+          </div>
+          <button class="modal-close-btn" id="closeResumeModalBtn" aria-label="Yopish">&times;</button>
+        </div>
+
+        <div class="modal-body resume-body">
+          <div class="resume-sheet">
+            <div class="resume-sheet-header">
+              <h2>Sirojiddin Narzullayev</h2>
+              <p class="resume-subtitle">Junior Flutter & Web Dasturchi &bull; O‘zbekiston</p>
+              <div class="resume-contacts-row">
+                <span><i class="fa-brands fa-telegram"></i> @Narzullayev_w</span>
+                <span><i class="fa-solid fa-envelope"></i> goldsirojiddin@gmail.com</span>
+              </div>
+            </div>
+
+            <hr class="resume-divider">
+
+            <div class="resume-sheet-section">
+              <h3><i class="fa-solid fa-user"></i> Qisqa Ma'lumot</h3>
+              <p>O‘zbekistonlik yosh Junior dasturchi. Mobil ilovalar (Flutter/Dart) bo‘yicha boshlang‘ich amaliy tajribaga ega va vebsaytlar (HTML, CSS, JavaScript) yaratish asoslarini o‘rganmoqda. Yangi texnologiyalarni tez o‘zlashtiruvchi, o‘z ustida tinimsiz ishlovchi va jamoaga qo‘shilishga tayyor.</p>
+            </div>
+
+            <div class="resume-sheet-section">
+              <h3><i class="fa-solid fa-laptop-code"></i> Loyihalar</h3>
+              <div class="resume-item">
+                <div class="resume-item-top">
+                  <strong>Edu Play 365 (Mobil Ta’limiy Ilova)</strong>
+                  <span>Flutter, Dart</span>
+                </div>
+                <p>Bolalar va yoshlar uchun mantiqiy o‘yinlar va kunlik topshiriqlar platformasi.</p>
+              </div>
+            </div>
+
+            <div class="resume-sheet-section">
+              <h3><i class="fa-solid fa-gear"></i> Asosiy Ko‘nikmalar</h3>
+              <p><strong>Tillari va Freymvorklar:</strong> Flutter, Dart, HTML5, CSS3, JavaScript (ES6+)</p>
+              <p><strong>Vositalar:</strong> Git, GitHub, VS Code, Responsive Dizayn, Clean Code</p>
+              <p><strong>Tillar:</strong> O‘zbek tili (ona tili), Ingliz tili (texnik darajada o‘qish)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-primary" id="printResumeBtn">
+            <i class="fa-solid fa-print"></i> Rezyumeni Chop etish / PDF saqlash
+          </button>
+          <button class="btn btn-secondary" id="closeResumeModalBtn2">Yopish</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ==============================================
+       TOAST BILDIRISHNOMALARI KONTEYNERI
+  =============================================== -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Skript Fayli -->
+  <script src="script.js"></script>
+</body>
+</html>
